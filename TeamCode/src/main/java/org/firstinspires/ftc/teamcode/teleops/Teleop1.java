@@ -20,8 +20,7 @@ public class Teleop1 extends ActionSchedulerOpMode{
 
         if (!isBusy(Robot.mecanumDrive)) {
             Robot.mecanumDrive.setDrivePowers(
-                    new PoseVelocity2d(new Vector2d(-gamepad1.left_stick_y, -gamepad1.left_stick_x),
-                            -gamepad1.right_stick_y));
+                    new PoseVelocity2d(new Vector2d(gamepad1.left_stick_x, gamepad1.left_stick_y),gamepad1.right_stick_y));
         }
 
 
