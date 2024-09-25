@@ -45,6 +45,7 @@ import org.firstinspires.ftc.teamcode.messages.DriveCommandMessage;
 import org.firstinspires.ftc.teamcode.messages.MecanumCommandMessage;
 import org.firstinspires.ftc.teamcode.messages.MecanumLocalizerInputsMessage;
 import org.firstinspires.ftc.teamcode.messages.PoseMessage;
+import org.firstinspires.ftc.teamcode.subsystems.Subsystem;
 
 import java.lang.Math;
 import java.util.Arrays;
@@ -52,7 +53,23 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Config
-public final class MecanumDrive {
+public final class MecanumDrive extends Subsystem {
+    /**
+     * Method that runs each time the opmode loops.
+     * Usually, you will want to output telemetry here (encoder values and such).
+     * Warning: Actions may be running, so generally you shouldn't control
+     * actuators here, unless you are doing something fun like a state machine
+     * (in which case you probably shouldn't control actuators outside of this method...).
+     * Instead, have your autonomous run actions, and your teleop schedule actions or run methods
+     * directly.
+     *
+     * @param p Telemetry packet for sending data to the driver hub / dashboard
+     */
+    @Override
+    public void periodic(TelemetryPacket p) {
+
+    }
+
     public static class Params {
         // IMU orientation
         // TODO: fill in these values based on
