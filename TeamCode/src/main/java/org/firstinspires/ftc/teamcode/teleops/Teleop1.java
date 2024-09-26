@@ -19,8 +19,14 @@ public class Teleop1 extends ActionSchedulerOpMode{
     public void loopOpMode(TelemetryPacket p) {
 
         if (!isBusy(Robot.mecanumDrive)) {
+            //Get joystick values
+            double lr = gamepad1.left_stick_x;
+            double fb = -gamepad1.left_stick_y;
+            double rot = -gamepad1.right_stick_x;
+
+            //Tell mecanumDrive what to do
             Robot.mecanumDrive.setDrivePowers(
-                    new PoseVelocity2d(new Vector2d(gamepad1.left_stick_x, gamepad1.left_stick_y),gamepad1.right_stick_y));
+                    new PoseVelocity2d(new Vector2d(fb, -lr),rot));
         }
 
 
