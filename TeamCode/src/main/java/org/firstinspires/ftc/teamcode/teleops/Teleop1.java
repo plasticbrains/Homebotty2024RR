@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Robot;
 //wifi 4381442210024
-@TeleOp(name="My Teleop")
+@TeleOp(name="MecanumDriveRR")
 public class Teleop1 extends ActionSchedulerOpMode{
 
     @Override
@@ -22,11 +22,11 @@ public class Teleop1 extends ActionSchedulerOpMode{
             //Get joystick values
             double lr = gamepad1.left_stick_x;
             double fb = -gamepad1.left_stick_y;
-            double rot = -gamepad1.right_stick_x;
+            double rot = gamepad1.right_stick_x;
 
             //Tell mecanumDrive what to do
             Robot.mecanumDrive.setDrivePowers(
-                    new PoseVelocity2d(new Vector2d(fb, -lr),rot));
+                    new PoseVelocity2d(new Vector2d(fb, lr),rot));
         }
 
 
