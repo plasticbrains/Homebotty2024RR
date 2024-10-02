@@ -29,6 +29,11 @@ public class Teleop1 extends ActionSchedulerOpMode{
                     new PoseVelocity2d(new Vector2d(fb, lr),rot));
         }
 
+        if (!isBusy(Robot.slide)) {
+            Robot.slide.setMotorSpeed(gamepad2.left_stick_y);
+        }
+
+
 
     }
 }
