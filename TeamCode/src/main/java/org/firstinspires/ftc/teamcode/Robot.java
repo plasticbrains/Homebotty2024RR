@@ -45,6 +45,8 @@ public class Robot {
         mecanumDrive = new MecanumDrive(hardwareMap, startPose);
 
         thrower = new Thrower(hardwareMap);
+        fakeArm = new FakeArm(hardwareMap);
+        slide = new Slide(hardwareMap);
 
 
         // TODO Initialize your subsystems

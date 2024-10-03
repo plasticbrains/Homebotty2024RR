@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.teamcode.actions.MotorToPositionAction;
 
 public class Thrower extends Subsystem{
-    DcMotorEx motor;
+    private DcMotorEx motor;
 
     public Thrower(HardwareMap hardwareMap)
     {

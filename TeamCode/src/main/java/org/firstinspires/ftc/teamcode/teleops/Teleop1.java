@@ -30,9 +30,12 @@ public class Teleop1 extends ActionSchedulerOpMode{
         }
 
         if (!isBusy(Robot.slide)) {
-            Robot.slide.setMotorSpeed(gamepad2.left_stick_y);
+            Robot.slide.setMotorSpeed(-gamepad2.left_stick_y);
         }
 
+        if (!isBusy(Robot.thrower)) {
+            Robot.thrower.setSpeed(-gamepad2.right_stick_y);
+        }
 
 
     }
