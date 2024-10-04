@@ -38,11 +38,11 @@ public class Teleop1 extends ActionSchedulerOpMode{
         }
 
         if (!isBusy(Robot.pivot)) {
-            Robot.pivot.setMotorSpeed(gamepad1.left_trigger);
+            Robot.pivot.setMotorSpeed(gamepad2.left_trigger);
         }
 
         if (!isBusy(Robot.climb)) {
-            Robot.climb.setMotorSpeed(gamepad1.right_trigger);
+            Robot.climb.setMotorSpeed(gamepad2.right_trigger);
         }
 
 

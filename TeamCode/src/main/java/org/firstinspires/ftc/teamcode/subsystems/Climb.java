@@ -10,7 +10,7 @@ public class Climb extends  Subsystem{
     private DcMotorEx motor4;
 
     public Climb(HardwareMap hardwareMap) {
-        motor4 = hardwareMap.get(DcMotorEx.class, "motor2");
+        motor4 = hardwareMap.get(DcMotorEx.class, "motor4");
         motor4.setDirection(DcMotorSimple.Direction.FORWARD);
         motor4.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
