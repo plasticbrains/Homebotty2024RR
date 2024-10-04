@@ -52,7 +52,7 @@ public class Robot {
         fakeArm = new FakeArm(hardwareMap);
         slide = new Slide(hardwareMap);
         pivot = new Pivot(hardwareMap);
-        climb = new Climb(hardwareMap)
+        climb = new Climb(hardwareMap);
 
 
         // TODO Initialize your subsystems
@@ -68,7 +68,7 @@ public class Robot {
                 fakeArm,
                 slide,
                 pivot,
-                climb,
+                climb
         };
 
     }
