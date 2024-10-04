@@ -3,7 +3,9 @@ package org.firstinspires.ftc.teamcode;
 import com.acmerobotics.roadrunner.Pose2d;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+import org.firstinspires.ftc.teamcode.subsystems.Climb;
 import org.firstinspires.ftc.teamcode.subsystems.FakeArm;
+import org.firstinspires.ftc.teamcode.subsystems.Pivot;
 import org.firstinspires.ftc.teamcode.subsystems.Slide;
 import org.firstinspires.ftc.teamcode.subsystems.Subsystem;
 import org.firstinspires.ftc.teamcode.subsystems.Thrower;
@@ -22,6 +24,8 @@ public class Robot {
     public static Thrower thrower;
     public static FakeArm fakeArm;
     public static Slide slide;
+    public static Pivot pivot;
+    public static Climb climb;
 
 
     public static MecanumDrive mecanumDrive;
@@ -47,6 +51,8 @@ public class Robot {
         thrower = new Thrower(hardwareMap);
         fakeArm = new FakeArm(hardwareMap);
         slide = new Slide(hardwareMap);
+        pivot = new Pivot(hardwareMap);
+        climb = new Climb(hardwareMap)
 
 
         // TODO Initialize your subsystems
@@ -60,7 +66,9 @@ public class Robot {
                 mecanumDrive,
                 thrower,
                 fakeArm,
-                slide
+                slide,
+                pivot,
+                climb,
         };
 
     }
